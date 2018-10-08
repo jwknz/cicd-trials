@@ -8,3 +8,4 @@ after_success:
   - git remote add bcs administrator@tga.ecti.ac.nz:/home/administrator/trials/repo
   - git remote -v
   - git status
+  - git push bcs master
