@@ -1,0 +1,11 @@
+version: "3"
+  
+services:
+  cicd:
+    image: node:10.11.0
+    ports:
+        - "3000:3000"
+    volumes:
+      - /home/jk11/app:/app
+    working_dir: /app
+    command: npm run first
