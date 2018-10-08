@@ -4,6 +4,8 @@ node_js:
 cache:
   directories:
     - "node_modules"
+before_script:
+  - echo -e "Host tga.ecti.ac.nz\n\tStrictHostKeyChecking no\n" >> .travis/deploy
 after_success:
   - git branch
   - git checkout master
