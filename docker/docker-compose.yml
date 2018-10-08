@@ -6,6 +6,6 @@ services:
     ports:
         - "3000:3000"
     volumes:
-      - /home/jk11/app:/app
+      - /home/administrator/trials/app:/app
     working_dir: /app
-    command: npm start
+    command: npm run first
