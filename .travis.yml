@@ -4,8 +4,9 @@ node_js:
 cache:
   directories:
     - "node_modules"
-after_success: 
-  - git remote add bcs administrator@tga.ecti.ac.nz:/home/administrator/trials/repo
-  - git remote -v
-  - git status
-  - git push bcs master
+after_success:
+  - eval "$(ssh-agent -s)" #start the ssh agent
+  - chmod 600 .travis/deploy # this key should have push access
+  - ssh-add .travis/deploy
+  - git remote add deploy administrator@tga.ecti.ac.nz:/home/administrator/trials/repo
+  - git push deploy
