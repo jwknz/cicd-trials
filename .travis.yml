@@ -5,6 +5,7 @@ cache:
   directories:
     - "node_modules"
 after_success:
+  - git branch
   - eval "$(ssh-agent -s)" #start the ssh agent
   - chmod 600 .travis/deploy # this key should have push access
   - ssh-add .travis/deploy
