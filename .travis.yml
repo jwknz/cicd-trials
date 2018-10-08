@@ -5,4 +5,6 @@ cache:
   directories:
     - "node_modules"
 after_success: 
+  - git remote add bcs administrator@tga.ecti.ac.nz:/home/administrator/trials/repo
   - git remote -v
+  - git status
