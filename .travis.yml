@@ -7,9 +7,9 @@ cache:
 addons:
   ssh_known_hosts:
   - tga.ecti.ac.nz
+on:
+  branch: master
 after_success:
-  - git branch
-  - git checkout master
   - eval "$(ssh-agent -s)" #start the ssh agent
   - chmod 600 .travis/deploy # this key should have push access
   - ssh-add .travis/deploy
