@@ -1,0 +1,10 @@
+#!/bin/bash
+
+git checkout -f
+
+docker-compose -f ../app/docker/docker-compose.yml up -d --force-recreate
+
+rm -rf ../app/docker
+rm -rf ../app/.gitignore
+rm -rf ../app/.travis
+rm -rf ../app/.travis.yml
